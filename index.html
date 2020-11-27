@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>電子アルバム</title>
+</head>
+<body>
+    <div class="title">
+    <h1>電子アルバム</h1>
+    <div class="tukaikata">
+        <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+            <a style="cursor:pointer;">▼ 使い方 (クリックすると展開します)</a>
+            </div>
+            <div id="open" style="display:none;clear:both;">
+
+                <p>思い出を共有するためのものです。</p>
+                <p>1. 場所と残したい思い出を記入します。 <b>(思い出のみ入力必須です)</b>。</p>
+                <p>2. 入力を終えたら「送信」ボタンをクリックします。</p>
+                <p>3. 思い出の共有を超えるとあることが起こります。</p>
+                </div></div>
+      
+
+
+    </div>
+<table>
+    <td>
+    <div class="chat">
+        <div class="output">
+           
+         </div>
+    
+    <div class="sousinretu">
+         <div class="naiyou">
+            <input type="text" id="map_text" placeholder="場所を入力してください" style="width: 300px;height: 23px;">
+
+            <input type="text" id="text" placeholder="思い出を入力してください (必須) " style="width: 300px;height: 23px;">
+
+        </div>
+
+ 
+
+         <div class="tate">
+             <div class="sotosousin">
+           <div class="sousin">
+                送信 (shift + Enter)
+            </div></div>
+
+            <div class="random">
+                <div class="sotomode">
+                <div class="mode">ランダム送信</div></div>
+                <div id="setumei">
+                 
+                    <h4>おめでとうございます！<br>あなたは1000回以上のメッセージを送りました。</h4>
+                    この「ランダム送信」ボタンは25%の確率で相手にメッセージを送ることができる機能です。
+                    <u>75%の確率であなたのメッセージは送られずに消えてしまうので、注意してください。</u>
+                    告白に使ってもよし、普段思っている感謝の気持ちを伝えるのもよし、ゲーム感覚でご使用いただいてもよしです。
+                </div>
+            </div></div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+</td>
+<td class="mapcell">
+    <div id="map" style="width:400px;height:450px;"></div>
+    <div id="result_position">  </div>
+</td>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxjtNM37BGzzGs9vFfSuRm34z5Nxwvr5c&callback=initMap" async defer></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+        apiKey: "AIzaSyAdsH8_Bkt-9m02KrxCsI4zUlCTmTI25n0",
+        authDomain: "dev18-chat-87cf4.firebaseapp.com",
+        databaseURL: "https://dev18-chat-87cf4.firebaseio.com",
+        projectId: "dev18-chat-87cf4",
+        storageBucket: "dev18-chat-87cf4.appspot.com",
+        messagingSenderId: "265540755940",
+        appId: "1:265540755940:web:9343c9dcd06433a7eb67f1"
+        };
+        firebase.initializeApp(firebaseConfig);
+    
+        const newPostRef = firebase.database().ref();
+        </script>
+
+<script src="js/line.js"></script>
+</body>
+</html>

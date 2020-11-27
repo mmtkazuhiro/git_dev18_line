@@ -1,0 +1,153 @@
+.chat{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.tukaikata{
+    padding-bottom: 10px;
+}
+
+
+
+.output{
+    
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    color: #2c2c2f;
+    background: #cde4ff;
+    border-top: solid 5px #5989cf;
+    border-bottom: solid 5px #5989cf;
+    overflow: auto;
+}
+
+.sousinretu{
+    display: flex;
+}
+
+.sotosousin{
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+.sousin{
+    cursor: pointer;
+    cursor: hand;
+    width: 180px;
+    height: 20px;
+    font-size: 16px;
+    display: block;
+    padding: 5px 5px;
+    color:rgb(170, 242, 255);
+    background-color:#494ed4;
+}
+
+.chat{
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.output{
+    text-align: right;
+    padding-right: 20px;
+}
+
+.jikan{
+    font-size: small;
+}
+
+.textmessage{
+    font-size: large;
+}
+
+
+.sotomode{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.mode{
+    display: none;
+    cursor: pointer;
+    cursor: hand;
+    width: 180px;
+    height: 20px;
+    font-size: 16px;
+    padding: 5px 5px;
+    color:rgb(170, 242, 255);
+    background-color:#d45949;
+}
+
+.random {
+    position: relative;
+}
+
+#setumei{
+    display: none;
+
+    transition: 0.5s;
+    background: rgb(125, 230, 5);
+    position: absolute;
+    color: rgb(230, 63, 63);
+    padding: 5px;
+    width: 500px;
+    bottom: 110%;
+    left:-25%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    border-radius: 5px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.random::before {
+    transition: 0.5s;
+    content: "";
+    position: absolute;
+    bottom:12px;
+    left:calc(50% - 7px);
+    margin-top: -3px;
+    visibility: hidden;
+    pointer-events: none;
+}
+.random:hover:before{
+    opacity: 1;
+    visibility: visible;
+}
+.random:hover #setumei{
+    opacity: 1;
+    visibility: visible;
+}
+
+h4{
+    text-align: center;
+}
+
+#setumei{
+    text-align: left;
+}
+
+.tate{
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.message{
+    display: flex;
+}
+
+.naiyou{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+
+
+
+.mapcell{
+    width: 450px;
+}
